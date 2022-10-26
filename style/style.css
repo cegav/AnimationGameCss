@@ -1,0 +1,372 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    counter-reset: game;
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    place-items: center;
+}
+
+input:checked {
+    counter-increment: game;
+}
+
+.total-count::after {
+    content: counter(game);
+}
+
+.phone {
+    position: relative;
+    border: 8px solid black;
+    border-radius: 40px;
+    width: 300px;
+    height: 600px;
+    background: rgb(34,195,147);
+    background: linear-gradient(0deg, rgba(34,195,147,1) 0%, rgba(240,162,255,1) 100%);
+    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.2);
+}
+
+.layer-1 {
+    position: absolute;
+    z-index: 1;
+    height: 450px;
+    width: 75px;
+    background: transparent;
+    bottom: 0;
+    right: 60px;
+}
+
+.layer-2 {
+    position: absolute;
+    z-index: 2;
+    height: 450px;
+    width: 75px;
+    background: transparent;
+    bottom: 0;
+    left: 60px;
+}
+
+.layer-3 {
+    position: absolute;
+    z-index: 3;
+    width: 220px;
+    height: 400px;
+    background: #c6531c;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0 auto;
+    border-radius: 16px;
+}
+
+.layer-4 {
+    position: absolute;
+    z-index: 4;
+    height: 320px;
+    width: 75px;
+    background: transparent;
+    bottom: 0;
+    left: 45px;
+}
+
+.layer-5 {
+    position: absolute;
+    z-index: 5;
+    width: 180px;
+    height: 270px;
+    background: #c6531c;
+    border: 0.4px solid black;
+    bottom: 0;
+    border-radius: 16px 16px 0 40px;
+}
+
+.layer-6 {
+    position: absolute;
+    z-index: 6;
+    height: 200px;
+    width: 75px;
+    background: transparent;
+    bottom: 0;
+    right: 28px;
+}
+
+.layer-7 {
+    position: absolute;
+    z-index: 7;
+    width: 140px;
+    height: 150px;
+    background: #c6531c;
+    border: 0.4px solid black;
+    bottom: 0;
+    right: 0;
+    border-radius: 16px 16px 40px 0;
+}
+
+.layer-8 {
+    position: absolute;
+    z-index: 8;
+    width: 170px;
+    height: 80px;
+    background: transparent;
+    bottom: 0;
+    left: 57px;
+}
+
+.layer-9 {
+    position: absolute;
+    z-index: 9;
+    width: 72px;
+    height: 78px;
+    background: transparent;
+    bottom: 0;
+    border-radius: 0 0 0 32px;
+}
+
+.layer-10 {
+    position: absolute;
+    z-index: 10;
+    width: 72px;
+    height: 78px;
+    background: transparent;
+    bottom: 0;
+    right: 0;
+    border-radius: 0 0 32px;
+}
+
+.left-ear--outer {
+    border-bottom: 28px solid black;
+    border-left: 11px solid transparent;
+    border-right: 27px solid transparent;
+    width: 0;
+    height: 0;
+    position: absolute;
+    left: 6px;
+    top: 17px;
+}
+
+.left-ear--inner{
+    border-bottom: 22px solid pink;
+    border-left: 6px solid transparent;
+    border-right: 22px solid transparent;
+    width: 0;
+    height: 0;
+    position: absolute;
+    left: 12px;
+    top: 20px;
+}
+
+.right-ear--outer {
+    border-bottom: 28px solid black;
+    border-right: 11px solid transparent;
+    border-left: 27px solid transparent;
+    width: 0;
+    height: 0;
+    position: absolute;
+    right: 6px;
+    top: 17px;
+}
+
+.right-ear--inner{
+    border-bottom: 22px solid pink;
+    border-right: 6px solid transparent;
+    border-left: 22px solid transparent;
+    width: 0;
+    height: 0;
+    position: absolute;
+    right: 12px;
+    top: 20px;
+}
+
+.head {
+    background: rgb(206, 152, 64);
+    border-radius: 50%;
+    height: 80px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    position: absolute;
+    top: 26px;
+    width: 100%;
+}
+
+.head__eye {
+    background: papayawhip;
+    border: 0.5px solid black;
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    top: 8px;
+}
+
+.head__eye--left {
+    left: 20px;
+}
+
+.head__eye--right {
+    right: 20px;
+}
+
+.head-blue {
+    background: #3c93fb;
+    border-radius: 50%;
+    height: 80px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    position: absolute;
+    top: 18px;
+    width: 100%;
+}
+
+.head-blue__eye {
+    background: white;
+    border: 0.5px solid black;
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    top: 9px;
+}
+
+.head-blue__eye--left {
+    left: 20px;
+}
+
+.head-blue__eye--right {
+    right: 20px;
+}
+
+.head__pupil { 
+    background: black;
+    border-radius: 50%;
+    width: 4px;
+    height: 4px;
+    left: 0;
+    right: 0;
+    top: 2px;
+    margin: 0 auto;
+    position: absolute;
+
+}
+
+.zigzag:after{
+    content: "";
+    width: 100%;
+    height: 20px;
+    position: absolute;
+    top: 0;
+    height: 30px;
+    background: linear-gradient(135deg, #67A167 25%, transparent 25%) -50px 0,
+                linear-gradient(-135deg, #67A167 25%, transparent 25%) -50px 0,
+                linear-gradient(45deg, #67A167 25%, transparent 25%),
+                linear-gradient(-45deg, #67A167 25%, transparent 25%);
+    background-size: 30px 80px;
+    border-radius: 20px;
+}
+
+.zigzag::before {
+    content: "";
+    position: absolute; 
+    /* left: -0px; */
+    top: 15px;
+    width: 100%;
+    height: 40px;
+    background: linear-gradient(135deg, #a6543d 25%, transparent 25%) -50px 0,
+                linear-gradient(-135deg, #a6543d 25%, transparent 25%) -50px 0,
+                linear-gradient(45deg, #a6543d 25%, transparent 25%),
+                linear-gradient(-45deg, #a6543d 25%, transparent 25%);
+    background-size: 30px 100px;
+    background-position: 140px 0 0 30px 0;
+}
+
+.cloudv {
+    background: white;
+    width: 27px;
+    height: 70%;
+    position: absolute;
+    border-radius: 21px 18px 0 14px;
+}
+
+.cloudv-1 {
+    left: 0;
+}
+
+
+.cloudv-2 {
+    left: 27px;
+}
+
+.cloudv-3 {
+    right: 0;
+    border-radius: 21px 18px 14px 0px;
+}
+
+
+.cloudv-4 {
+    right: 27px;
+}
+
+.cloudh {
+    background: white;
+    width: 68px;
+    height: 30px;
+    left: 0;
+    right: 0;
+    position: absolute;
+    border-radius: 0px 38px 38px 80px;
+}
+
+.cloudh-1 {
+    top: 21px;
+}
+
+.cloudh-2 {
+    top: 48px;
+}
+
+.cloudh-3 {
+    top: 21px;
+    left: 4px;
+    border-radius: 38px 0px 80px 38px;
+}
+
+.cloudh-4 {
+    top: 48px;
+    left: 4px;
+    border-radius: 38px 0px 80px 38px;
+}
+
+.cloud-1 {
+    background: #67A167;
+    width: 70px;
+    height: 60px;
+    position: absolute;
+    top: 20px;
+    border-radius: 25px 25px 0px 10px;
+}
+
+.cloud-2 {
+    background: #67A167;
+    width: 52px;
+    height: 80px;
+    position: absolute;
+    top: 0;
+    left: 59px;
+    border-radius: 38px 38px 0px 10px;
+}
+
+.cloud-3 {
+    background: #67A167;
+    width: 70px;
+    height: 60px;
+    position: absolute;
+    top: 20px;
+    right: 0;
+    border-radius: 25px 25px 0px 10px;
+}
